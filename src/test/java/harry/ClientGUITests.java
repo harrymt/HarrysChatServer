@@ -21,6 +21,10 @@ public class ClientGUITests {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		// Start server
+		HelperMethods.startServer();
+		
+		// Start GUI
 		clientGUI = new FrameFixture(new ClientGUI());
 		clientGUI.button(btnStart).click();
 	}
@@ -28,6 +32,9 @@ public class ClientGUITests {
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
 		clientGUI.cleanUp();
+		
+		// Stop Server
+		HelperMethods.stopServer();
 	}
 	
 	/**

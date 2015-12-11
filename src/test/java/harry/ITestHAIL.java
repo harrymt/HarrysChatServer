@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import harry.ClientStub;
 
-public class HarrysTest {
+public class ITestHAIL {
 	private static ClientStub client = null;
 
 	@BeforeClass

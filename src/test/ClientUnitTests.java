@@ -1,10 +1,11 @@
-package chatClient;
+package test;
 
 import static org.junit.Assert.*;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import main.ClientGUI;
 
 public class ClientUnitTests {
 	static ClientGUI client;

@@ -1,4 +1,4 @@
-package chatserver;
+package main;
 
 public class Runner
 {

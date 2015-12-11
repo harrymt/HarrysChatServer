@@ -1,7 +1,7 @@
-package integrationTests;
+package test;
 
-import chatClient.ClientStub;
-import chatserver.Server;
+import main.ClientStub;
+import main.Server;
 
 public class HelperMethods {
 

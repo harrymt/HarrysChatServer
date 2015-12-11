@@ -1,8 +1,11 @@
-package chatClient;
+package test;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import main.ClientGUI;
+
 import static org.junit.Assert.*;
 import org.fest.swing.fixture.FrameFixture;
 

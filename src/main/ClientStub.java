@@ -1,10 +1,10 @@
-package chatClient;
+package main;
 
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 
-import chatserver.ProjectSettings;
+import main.ProjectSettings;
 
 public class ClientStub {
 	private BufferedReader in;

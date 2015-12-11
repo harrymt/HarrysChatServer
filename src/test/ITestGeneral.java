@@ -1,11 +1,11 @@
-package integrationTests;
+package test;
 import static org.junit.Assert.*;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import chatClient.ClientStub;
+import main.ClientStub;
 
 public class ITestGeneral {
 	private static ClientStub client = null;

@@ -24,7 +24,6 @@ public class ClientGUI extends JFrame {
 		StartServer onClickStartHandler = new StartServer();
 		SendMessage onClickSendMessageHandler = new SendMessage();
 
-		// Needed for GUI testing TODO talk about this in report
 		connectToServerButton.setName("btnStart");
 		sendMessageButton.setName("btnSend");
 		tbOutput.setName("txaOutputText");

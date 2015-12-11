@@ -48,7 +48,6 @@ public class ClientUnitTests {
 		assertFalse(client.validCommand(input));
 		input = "IDEN ";
 		assertFalse(client.validCommand(input));
-		// TODO discuss how this is allowed
 		input = "IDEN  ";
 		assertTrue(client.validCommand(input));
 	}

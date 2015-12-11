@@ -12,18 +12,17 @@ import org.fest.swing.fixture.FrameFixture;
 public class ClientGUITests {
 
 	private static FrameFixture clientGUI;
-	
+
 	private final static String btnStart = "btnStart";
-	private final String btnSend = "btnSend";	
+	private final String btnSend = "btnSend";
 	private final String textFieldUserInput = "txfTypedText";
 	private final String textAreaOutputText = "txaOutputText";
-	
-	
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		// Start server
 		HelperMethods.startServer();
-		
+
 		// Start GUI
 		clientGUI = new FrameFixture(new ClientGUI());
 		clientGUI.button(btnStart).click();
@@ -32,20 +31,21 @@ public class ClientGUITests {
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
 		clientGUI.cleanUp();
-		
+
 		// Stop Server
 		HelperMethods.stopServer();
 	}
-	
+
 	/**
 	 * written
+	 * 
 	 * @throws InterruptedException
 	 */
 	@Test
 	public void showResponseFromCommandEnteredCorrectly() throws InterruptedException {
 		clientGUI.textBox(textFieldUserInput).enterText("STAT");
 		clientGUI.button(btnSend).click();
-		
+
 		// Wait until GUI has written to text box
 		clientGUI.robot.waitForIdle();
 
@@ -61,51 +61,53 @@ public class ClientGUITests {
 		String response = getLastResponseWritten("BAD asd" + System.getProperty("line.separator") + "OK asd");
 		assertEquals("Check helper method", "OK asd", response);
 	}
-	
+
 	/**
 	 * 
 	 * @param outputText
 	 * @return
 	 */
 	private String getLastResponseWritten(String outputText) {
-		if(!outputText.contains(System.getProperty("line.separator"))) {
+		if (!outputText.contains(System.getProperty("line.separator"))) {
 			return "";
 		}
-		
+
 		String[] output = outputText.split(System.getProperty("line.separator"));
 		return output[output.length - 1];
 	}
 
 	/**
 	 * written
+	 * 
 	 * @throws InterruptedException
 	 */
 	@Test
 	public void showResponseFromCommandEnteredInCorrectly() throws InterruptedException {
 		clientGUI.textBox(textFieldUserInput).enterText("LIST");
 		clientGUI.button(btnSend).click();
-		
+
 		// Wait until GUI has written to text box
 		clientGUI.robot.waitForIdle();
 
 		String response = getLastResponseWritten(clientGUI.textBox(textAreaOutputText).text());
 		assertTrue("Check bad server response.", response.startsWith("BAD"));
 	}
-	
+
 	/**
 	 * written
+	 * 
 	 * @throws InterruptedException
 	 */
 	@Test
 	public void showInvalidCommandFromClient() throws InterruptedException {
 		clientGUI.textBox(textFieldUserInput).enterText("MESG  ");
 		clientGUI.button(btnSend).click();
-		
+
 		// Wait until GUI has written to text box
 		clientGUI.robot.waitForIdle();
 
 		String response = getLastResponseWritten(clientGUI.textBox(textAreaOutputText).text());
 		assertEquals("Check bad server response.", response, ">Invalid Command");
 	}
-	
+
 }

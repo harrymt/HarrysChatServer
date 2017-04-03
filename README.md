@@ -1,5 +1,6 @@
 
 # Pop3 Chat Server
+[![Build Status](https://travis-ci.org/harrymt/HarrysChatServer.svg?branch=master)](https://travis-ci.org/harrymt/HarrysChatServer)
 [![codebeat badge](https://codebeat.co/badges/7f5e6106-336a-4c53-9421-28e6c59292dd)](https://codebeat.co/projects/github-com-harrymt-harryschatserver-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d038013862047fc8340b72aa6f24d9e)](https://www.codacy.com/app/harrymt/HarrysChatServer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=harrymt/HarrysChatServer&amp;utm_campaign=Badge_Grade)
 

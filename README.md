@@ -4,6 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/harrymt/HarrysChatServer/badge.svg?branch=master)](https://coveralls.io/github/harrymt/HarrysChatServer?branch=master)
 [![codebeat badge](https://codebeat.co/badges/7f5e6106-336a-4c53-9421-28e6c59292dd)](https://codebeat.co/projects/github-com-harrymt-harryschatserver-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d038013862047fc8340b72aa6f24d9e)](https://www.codacy.com/app/harrymt/HarrysChatServer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=harrymt/HarrysChatServer&amp;utm_campaign=Badge_Grade)
+[![BCH compliance](https://bettercodehub.com/edge/badge/harrymt/HarrysChatServer?branch=master)](https://bettercodehub.com/)
 
 [Written](G53SQM-psyhm1-Report.pdf) for the University of Nottingham unit, Software Quality Management.
 
